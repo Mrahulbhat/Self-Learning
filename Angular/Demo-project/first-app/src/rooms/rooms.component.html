@@ -1,0 +1,9 @@
+<h1>Rooms Price List</h1>
+<p>Hotel name - <span [innerText]="Hotelname"></span></p>
+<ul *ngIf="hideRooms">
+    <li *ngFor="let room of rooms">
+        {{room.category}} - {{room.price}}
+    </li>
+</ul>
+
+<button (click) = toggle()>Show/Hide Rooms</button>
