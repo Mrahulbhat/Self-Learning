@@ -1,0 +1,53 @@
+Introduction:
+- Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of project!
+- Node.js runs the V8 JavaScript engine, the core of Google Chrome, outside of the browser. This allows Node.js to be very performant.
+- It runs in a single process (single thread) and doesnot create a new thread for every single request.
+- Asyncronous in nature and hence doesnot get affected get blocked.
+
+Uses:
+- File system access: Provides API's to read and write files directly (which is not possible in browser for security reasons).
+- Server side Capabilities: Node js enables JS to run on the server, handle Http requests, file operations, and other server side functionalities.
+- Modules: Organize code into modules which can be reused using require().
+
+Features removed in Node.js ❌ :
+- Window object.
+- DOM manipulation.
+- BOM features like navigation etc.
+- Web specific API's: Local Storage, Session storage, Cookies.
+
+JavaScript on Web Server:
+- Database Management: Crud operations.
+- Authentication, Authorization.
+- Input Validation.
+- Session Management.
+- API Management.
+- Error Handling.
+- Security measures.
+- Data Encryption.
+- Logging and Monitoring.
+- Real Time Data Apps: like chat apps and live updates, using WebSockets.
+
+JavaScript is also used to make Build Tools: Powers build processes for front-end tech using tools like Webpack, etc.
+
+Server Architecture with Node.js:
+- User/Device: Web page -> Browser -> Device(user).
+- Frontend/Client-Side (HTML,CSS,JS,REACT,etc) : This is sent as Web page to the user device.
+- Backend/Server-Side (Node.js).
+
+Node.js Server: 
+- Create server and listen to incoming requests.
+- Validation, DB connection, data processing.
+- return response in form of HTML, JSON, CSS, JS.
+
+REPL VS RELP:
+
+REPL: READ,EVAL,PRINT,LOOP.
+RELP: READ,EVAL,LOOP,PRINT.
+
+REPL:
+- Executes JS code interactively.
+- Quick Testing and Debugging
+- Session Management: Supports saving (.save) and loading (.load) code sessions.
+- Node.js API Access.
+- Allows customization of prompt and other settings.
+
