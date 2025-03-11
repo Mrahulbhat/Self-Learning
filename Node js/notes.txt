@@ -51,3 +51,24 @@ REPL:
 - Node.js API Access.
 - Allows customization of prompt and other settings.
 
+========================================================================
+
+How DNS Works?
+-> Domain Name System: Imagine a container which stores a domain with a Address.
+-> How will we search Google.com , we will type it rather than 87.222.xxxxx...
+
+Example: 
+Where is google.com? => Now it checks in DNS and returns the address => Now, it will go to that address to access google.com.
+
+Exact working: 
+1. Domain Name Entry: User searches/types a domain (www.google.com) into browser.
+2. DNS Query: Browser send a DNS query.
+3. DNS Server: Returns the correct IP address of that domain.
+4. Browser Connects: The browser uses the IP to connect to the web server and loads the website.
+
+
+But to be very precise:
+1. Root DNS: It is starting point for DNS resolution. It connects to correct TLD server (.com, .org) etc.
+2. TLD DNS (Top level Domain): Handles queries for specific top level domains (.com, .net) and directs them to the authoritative DNS server.
+3. Authoritative DNS: contains actual IP address of the domain and returns this IP address as answer to the query.
+
