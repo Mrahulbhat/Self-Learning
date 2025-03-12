@@ -146,3 +146,15 @@ const http = require('http');
 //server established.
 
 =======================================================================================================
+
+Request and Response
+
+* Node Lifecycle and Event Loop:
+
+Request => NODE SERVER => [ DB / FILESYSTEM/ NETWORK ETC]
+
+Node Server: contains Event Queue => Event Loop => Thread Pool.
+
+Each pool in thread pool is used to perform single task. One guy will do db work, one fs work etc. using callbacks.
+Event Loop listens to event coming from Event Queue and gives to thread pool.
+
