@@ -29,6 +29,8 @@ JavaScript on Web Server:
 
 JavaScript is also used to make Build Tools: Powers build processes for front-end tech using tools like Webpack, etc.
 
+=======================================================================================================
+
 Server Architecture with Node.js:
 - User/Device: Web page -> Browser -> Device(user).
 - Frontend/Client-Side (HTML,CSS,JS,REACT,etc) : This is sent as Web page to the user device.
@@ -51,7 +53,7 @@ REPL:
 - Node.js API Access.
 - Allows customization of prompt and other settings.
 
-========================================================================
+===========================================================================================================
 
 How DNS Works?
 -> Domain Name System: Imagine a container which stores a domain with a Address.
@@ -71,6 +73,8 @@ But to be very precise:
 1. Root DNS: It is starting point for DNS resolution. It connects to correct TLD server (.com, .org) etc.
 2. TLD DNS (Top level Domain): Handles queries for specific top level domains (.com, .net) and directs them to the authoritative DNS server.
 3. Authoritative DNS: contains actual IP address of the domain and returns this IP address as answer to the query.
+
+=======================================================================================================
 
 How Web Works?
 1. Client Request initiation: Client enters the url in browser hence initiates a network call.
@@ -98,6 +102,8 @@ HTTPS: Http Secure:
 TCP (Transmission Control Protocol):
 - Ensures reliable connection before data is transferred.
 
+=======================================================================================================
+
 Node Core Modules: 
 - Built-in: Core modules are included with Node.js installation.
 - No installation needed: directly used without npm install.
@@ -111,6 +117,8 @@ Node Core Modules:
 6. cryto: Provides crypto fn like hashing and encryption.
 7. url: Pastes and formats URL strings. 
 
+=======================================================================================================
+
 require() ?
 - Imports modules in Node.js.
 - Caching: Modules are catched until server closes.
@@ -119,6 +127,22 @@ require() ?
 syntax: const <name> = require('module'); // no need of .js extention
 Ex: const http = require('http);
 
+=======================================================================================================
+
 Creating Node Server:
 
+const http = require('http');
 
+ const server = http.createServer((req,res)=>{
+    console.log(req);
+ });
+
+ const port = 3000;
+
+ server.listen(port, () => {
+    console.log('Server running on port: '+ port);
+ });
+
+//server established.
+
+=======================================================================================================
