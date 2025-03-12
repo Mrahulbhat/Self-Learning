@@ -1,19 +1,19 @@
-const { log } = require('console');
-const fs = require('fs');
+const http = require('http');
 
+// http.createServer((req,res) =>{
+//     console.log(req);
+// })
 
-let a=10;
-let b=20;
+ // Now if i run this it opens and closes coz its not listening to you.
 
-let sum = a+b;
-let product=  a*b;
+ const server = http.createServer((req,res)=>{
+    console.log(req);
+ });
 
-let data = `Sum: ${sum}\nProduct: ${product}`;
-console.log(data);
+ const port = 3000;
 
-fs.writeFile('demo-text.txt',data,(err)=>{
-    if(err){
-        throw err;
-    }
-    log('Data has been written successfully');
-});
+ server.listen(port,()=>{
+    console.log('Server running on port: '+ port);
+ });
+
+//server established.
