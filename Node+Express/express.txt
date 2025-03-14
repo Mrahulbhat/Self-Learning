@@ -19,12 +19,16 @@ where [Middleware] = [m1 -> m2 -> m3 -> m4];
 
 Hence Request => [ m1->m2->m3-m4 ] -> Response
 
-Syntax of middleware: (req,res,next)=>{....}
+Syntax of middleware:
+    app.use(path,(req,res,next)=>{
+        ....
+    });
 
-Ex: app.use((req,res,next)=>{
+Ex: app.use(path,(req,res,next)=>{
     next();
     res.end();
 });
+====================================================================================
 
 CODE EXAMPLE: 🚀
 
@@ -60,5 +64,14 @@ NOTE:
 req -> middleware -> response
 
 - So once i send response, how can i go again to middleware.
+
+====================================================================================
+
+Routing using middlewares: 🚀
+
+- Syntax of app.use() is (path,callback);
+- so if we provide path as '/home', now it will accept all methods will home.
+- Solution: use app.get(path,callback); / app.post() / etc.
+- Both app.use() and app.get() and other have same syntax but have different behaviour.
 
 ====================================================================================
