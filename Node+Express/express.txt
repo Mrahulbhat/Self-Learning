@@ -1,0 +1,64 @@
+
+EXPRESS JS 🚀
+- Express.js is a web app FRAMEWORK (node.js -> only runtime env).
+- It is built on top of Node.js
+- used to build web servers, API's.
+- used to handle routing, middleware and req/res Management.
+
+Architecture: [ NODE.JS -> EXPRESS.JS -> DATABASE ]
+
+How to install : [ npm install express ]
+
+====================================================================================
+
+Middleware: 🚀
+
+Request -> [Middleware] -> Response
+
+where [Middleware] = [m1 -> m2 -> m3 -> m4];
+
+Hence Request => [ m1->m2->m3-m4 ] -> Response
+
+Syntax of middleware: (req,res,next)=>{....}
+
+Ex: app.use((req,res,next)=>{
+    next();
+    res.end();
+});
+
+CODE EXAMPLE: 🚀
+
+const express = require('express');
+const app = express();
+
+app.use((req, res, next) => {
+    console.log("I am first middleware", "\nMy url: ", req.url, "\nMy req method: ", req.method);
+    res.write("<h1>Welcome</h1>");
+    next(); //move to next middleware
+});
+
+app.use((req, res, next) => {
+    console.log("I am second middleware", "\nMy url: ", req.url, "\nMy req method: ", req.method);
+    res.write("<p>Welcome to Rahuls coding classes</p>");
+    res.end(); //end the response
+});
+
+const port = 3000;
+
+app.listen(port, () => {
+    console.log(`Server established successfully at port : ${port}`);
+});
+
+NOTE: 
+- app.use() : is used to create middlewares.
+- res.write(): is to write a section of data inside the response. It does not end the response.
+- res.send(): used to send complete response at once, it by default ends the response.
+- res.end(): used to end response (used after res.write())
+
+- I cannot add res.send() in both middleware
+
+req -> middleware -> response
+
+- So once i send response, how can i go again to middleware.
+
+====================================================================================
