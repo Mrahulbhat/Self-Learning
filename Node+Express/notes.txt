@@ -15,7 +15,7 @@ Features removed in Node.js ❌ :
 - BOM features like navigation etc.
 - Web specific API's: Local Storage, Session storage, Cookies.
 
-JavaScript on Web Server:
+JavaScript on Web Server: 🚀
 - Database Management: Crud operations.
 - Authentication, Authorization.
 - Input Validation.
@@ -31,7 +31,7 @@ JavaScript is also used to make Build Tools: Powers build processes for front-en
 
 =======================================================================================================
 
-Server Architecture with Node.js:
+Server Architecture with Node.js: 🚀
 - User/Device: Web page -> Browser -> Device(user).
 - Frontend/Client-Side (HTML,CSS,JS,REACT,etc) : This is sent as Web page to the user device.
 - Backend/Server-Side (Node.js).
@@ -41,21 +41,9 @@ Node.js Server:
 - Validation, DB connection, data processing.
 - return response in form of HTML, JSON, CSS, JS.
 
-REPL VS RELP:
-
-REPL: READ,EVAL,PRINT,LOOP.
-RELP: READ,EVAL,LOOP,PRINT.
-
-REPL:
-- Executes JS code interactively.
-- Quick Testing and Debugging
-- Session Management: Supports saving (.save) and loading (.load) code sessions.
-- Node.js API Access.
-- Allows customization of prompt and other settings.
-
 ===========================================================================================================
 
-How DNS Works?
+How DNS Works? 🚀
 -> Domain Name System: Imagine a container which stores a domain with a Address.
 -> How will we search Google.com , we will type it rather than 87.222.xxxxx...
 
@@ -104,7 +92,7 @@ TCP (Transmission Control Protocol):
 
 =======================================================================================================
 
-Node Core Modules: 
+Node Core Modules: 🚀
 - Built-in: Core modules are included with Node.js installation.
 - No installation needed: directly used without npm install.
 - Performance: High performace with good speed.
@@ -129,7 +117,7 @@ Ex: const http = require('http);
 
 =======================================================================================================
 
-Creating Node Server:
+Creating Node Server: 🚀
 
 const http = require('http');
 
@@ -147,7 +135,7 @@ const http = require('http');
 
 =======================================================================================================
 
-Request and Response
+Request and Response 🚀
 
 * Node Lifecycle and Event Loop:
 
@@ -160,6 +148,75 @@ Event Loop listens to event coming from Event Queue and gives to thread pool.
 
 ====================================================================================
 
-NPM INIT COMMAND:
+NPM INIT COMMAND: 🚀
 
 - Node package manager
+
+npm init:
+
+Output is a package.json file: with app.js as entry point, name of package is npm-test
+
+{
+  "name": "npm-test",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+====================================================================================
+
+NPM INSTALL COMMAND: is used to install dependencies contained in package.json.
+
+npm install <package-name>
+
+-save : Adds the package to the project's dependencies in package.json.
+-save-dev: Adds the package to the project's devDependencies in the package.json.
+-g: Installs the package globally, mkaing it available to entire system, not just for a particular project.
+-save-exact: Installs the exact version specified without updating for newer versions.
+-force: Forces npm to fetch and install packages even after the packages are already installed.
+
+NOTE: -save-dev: This saves space and uses only in development.
+Do this only when you need something during dev and not in production.
+EX: Testing frameworks, build tools, etc.
+
+Nodemon [ npm install nodemon --save-dev ]
+
+When i install nodemon, it also installs its req dependencies.
+Ex: If i bring SRK actor, he will carry his gym trainer, barber etc along with him.
+It will be stored in node_modules folder
+
+====================================================================================
+
+ERRORS AND DEBUGGING:
+
+Types of errors:
+
+- Syntax error: Basic errors in syntax in our code (missing semicolon etc).
+- Logical error: Code runs but produces incorrect results due to faulty logic (wrong formula).
+- Runtime error: Errors which occurs during runtime due to faulty code.
+
+
+example for runtime errors:
+
+let num = 10;
+num(); //type error
+
+Debugging (Start Debugging): It executes code line by line and displays output accordingly.
+
+====================================================================================
+====================================================================================
+
+EXPRESS JS 🚀
+- Express.js is a web app FRAMEWORK (node.js -> only runtime env).
+- It is built on top of Node.js
+- used to build web servers, API's.
+- used to handle routing, middleware and req/res Management.
+
+Architecture: [ NODE.JS -> EXPRESS.JS -> DATABASE ]
+
+How to install : [ npm install express ]
